@@ -17,7 +17,7 @@ import java.util.Map;
  */
 public class User {
 
-    private static final int INITIAL_ENERGY_AMOUNT = 2000;
+    private static final int INITIAL_ENERGY_AMOUNT = Integer.MAX_VALUE;
 
     public Map<Integer, String> dashShareTokens;
     public Map<Integer, String> dashTokens;
@@ -132,17 +132,17 @@ public class User {
 
     public void subtractEnergy(int price) {
         checkPrice(price);
-        this.energy -= price;
+       // this.energy -= price;
         this.lastModifiedTs = System.currentTimeMillis();
     }
 
     public void recycleEnergy(int price) {
-        this.energy += price;
+       // this.energy += price;
         this.lastModifiedTs = System.currentTimeMillis();
     }
 
     public void purchaseEnergy(int price) {
-        this.energy += price;
+       // this.energy += price;
         this.lastModifiedTs = System.currentTimeMillis();
     }
 
